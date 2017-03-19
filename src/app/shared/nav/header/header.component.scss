@@ -1,0 +1,9 @@
+@import '~assets/variables.scss'; 
+nav {  
+    background-color: $header-color;
+}
+
+.navbar-brand img {
+    height: 32px;
+    margin-left: 10px;
+}
