@@ -13,7 +13,8 @@ import { VideosComponent } from './videos/videos.component';
 import { VideoListComponent } from './videos/video-list/video-list.component';
 import { VideoDetailComponent } from './videos/video-detail/video-detail.component';
 import { VideoListItemComponent } from './videos/video-list-item/video-list-item.component';
-//import { PaginationControlsComponent, PaginatePipe, PaginationService } from "ng2-pagination";
+
+import {Ng2PaginationModule} from 'ng2-pagination';
 
 
 @NgModule({
@@ -25,19 +26,17 @@ import { VideoListItemComponent } from './videos/video-list-item/video-list-item
     VideosComponent,
     VideoListComponent,    
     VideoDetailComponent,
-    VideoListItemComponent,
-    //PaginationControlsComponent,
-    //PaginatePipe
+    VideoListItemComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2PaginationModule
   ],
   providers: [
     AppState,
-    VideoService
-    //PaginationService
+    VideoService    
     ],
   bootstrap: [AppComponent]
 })

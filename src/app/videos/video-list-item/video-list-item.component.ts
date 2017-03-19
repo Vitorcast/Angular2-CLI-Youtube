@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Video } from './../shared/video.model';
+import { Component, OnInit, Input} from '@angular/core';
+import { AppState } from '../../shared/app-state.service';
 
 @Component({
   selector: 'app-video-list-item',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoListItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() video: Video;
+
+  constructor(private appState: AppState) { }
+
+  onClick(){
+    this.appState.activeVideo = this.video;
+  }
 
   ngOnInit() {
   }
