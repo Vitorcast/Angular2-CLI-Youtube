@@ -3,7 +3,16 @@ nav {
     background-color: $header-color;
 }
 
+.navbar-brand{
+    float: left;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
 .navbar-brand img {
     height: 32px;
     margin-left: 10px;
+    
 }
